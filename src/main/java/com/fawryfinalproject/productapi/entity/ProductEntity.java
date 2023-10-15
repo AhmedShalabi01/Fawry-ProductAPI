@@ -33,7 +33,7 @@ public class ProductEntity {
     @Column(name = "price")
     private double price;
 
-    @Column(name = "imageUrl")
+    @Column(name = "image_Url")
     private String imageUrl;
 
     @ManyToOne(cascade = CascadeType.MERGE)
