@@ -2,7 +2,6 @@ package com.fawryfinalproject.productapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fawryfinalproject.productapi.entity.CategoryEntity;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

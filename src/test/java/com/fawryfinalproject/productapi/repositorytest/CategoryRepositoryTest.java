@@ -1,7 +1,6 @@
 package com.fawryfinalproject.productapi.repositorytest;
 
 import com.fawryfinalproject.productapi.entity.CategoryEntity;
-import com.fawryfinalproject.productapi.entity.ProductEntity;
 import com.fawryfinalproject.productapi.repository.CategoryRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

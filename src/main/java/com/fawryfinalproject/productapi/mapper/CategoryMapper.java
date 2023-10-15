@@ -1,9 +1,7 @@
 package com.fawryfinalproject.productapi.mapper;
 
 import com.fawryfinalproject.productapi.entity.CategoryEntity;
-import com.fawryfinalproject.productapi.entity.ProductEntity;
 import com.fawryfinalproject.productapi.model.CategoryModel;
-import com.fawryfinalproject.productapi.model.ProductModel;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
