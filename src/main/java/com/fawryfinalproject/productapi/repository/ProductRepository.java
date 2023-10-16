@@ -8,7 +8,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface ProductRepository extends JpaRepository<ProductEntity,Long> {
-
     List<ProductEntity> findByCategoryNameContaining(String name);
     @Query("SELECT product FROM ProductEntity product WHERE CAST(product.id AS string) LIKE %:id%")
     List<ProductEntity> findByIdContaining(@Param("id") String id);

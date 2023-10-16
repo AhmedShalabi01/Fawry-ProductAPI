@@ -8,8 +8,6 @@ import lombok.Data;
 @Entity
 @Table(name = "product")
 public class ProductEntity {
-
-
     public ProductEntity(Long id, String name, double price, String imageUrl, CategoryEntity category) {
         this.id = id;
         this.name = name;

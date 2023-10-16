@@ -16,6 +16,4 @@ public class ProductStoreModel {
 
     private String imageUrl;
 
-//    @JsonIgnore
-//    private CategoryEntity category;
 }

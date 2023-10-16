@@ -35,7 +35,6 @@ public class ProductModel {
     @NotBlank(message = "Image link cannot be blank")
     private String imageUrl;
 
-//    @NotBlank(message = "Category name cannot be blank")
     private String categoryName;
 
     @JsonIgnore

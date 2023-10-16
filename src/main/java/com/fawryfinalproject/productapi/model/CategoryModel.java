@@ -8,7 +8,6 @@ import lombok.Data;
 public class CategoryModel {
     public CategoryModel() {
     }
-
     public CategoryModel(String name) {
         this.name = name;
     }
