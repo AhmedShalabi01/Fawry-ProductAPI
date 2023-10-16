@@ -40,7 +40,7 @@ public class ProductService {
     }
 
     //-------------------------------------------------------------------------------------------//
-    public ProductStoreModel getProductById(Long productId){
+    public ProductStoreModel getProductForStoreById(Long productId){
         return productMapper
                 .toStoreModel(productRepository.findById(productId)
                 .orElseThrow( ()-> new EntityNotFoundException("The Product with ID : (" + productId + ") does not exist")));

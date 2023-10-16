@@ -36,8 +36,8 @@ public class ProductController {
     //-------------------------------------------------------------------------------------------//
 
     @GetMapping("findByIdForStore/{id}")
-    public ResponseEntity<ProductStoreModel> getProductById(@PathVariable("id") Long productId){
-        return new ResponseEntity<>(productService.getProductById(productId), HttpStatus.FOUND);
+    public ResponseEntity<ProductStoreModel> getProductForStoreById(@PathVariable("id") Long productId){
+        return new ResponseEntity<>(productService.getProductForStoreById(productId), HttpStatus.FOUND);
     }
 
     //-------------------------------------------------------------------------------------------//
