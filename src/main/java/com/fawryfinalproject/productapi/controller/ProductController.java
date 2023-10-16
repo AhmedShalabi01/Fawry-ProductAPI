@@ -35,8 +35,8 @@ public class ProductController {
 
     //-------------------------------------------------------------------------------------------//
 
-    @GetMapping("/findById")
-    public ResponseEntity<ProductStoreModel> getProductById(@RequestParam Long productId){
+    @GetMapping("findById/{id}")
+    public ResponseEntity<ProductStoreModel> getProductById(@PathVariable("id") Long productId){
         return new ResponseEntity<>(productService.getProductById(productId), HttpStatus.FOUND);
     }
 
@@ -50,8 +50,8 @@ public class ProductController {
     //-------------------------------------------------------------------------------------------//
 
     @RequestMapping(value = "/search")
-    public ResponseEntity<List<ProductModel>> getProductByIdOrNameOrCategory(@RequestParam(value = "product") String product){
-        return new ResponseEntity<>(productService.getProductByIdOrNameOrCategory(product), HttpStatus.FOUND);
+    public ResponseEntity<List<ProductModel>> getProductByIdOrNameOrCategory(@RequestParam(name = "Keyword") String Keyword){
+        return new ResponseEntity<>(productService.getProductByIdOrNameOrCategory(Keyword), HttpStatus.FOUND);
     }
 
     //-------------------------------------------------------------------------------------------//
