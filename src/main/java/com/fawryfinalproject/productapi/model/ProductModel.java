@@ -32,10 +32,10 @@ public class ProductModel {
     @Min(value = 1, message = "Category ID must be a positive number")
     private int categoryId;
 
+    private String categoryName;
+
     @NotBlank(message = "Image link cannot be blank")
     private String imageUrl;
-
-    private String categoryName;
 
     @JsonIgnore
     private CategoryEntity category;
