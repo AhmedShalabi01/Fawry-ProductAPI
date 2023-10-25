@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fawryfinalproject.productapi.entity.CategoryEntity;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -20,7 +19,6 @@ public class ProductModel {
     public ProductModel() {
     }
 
-    @NotNull
     private Long id;
 
     @NotBlank(message = "Product name cannot be blank")
