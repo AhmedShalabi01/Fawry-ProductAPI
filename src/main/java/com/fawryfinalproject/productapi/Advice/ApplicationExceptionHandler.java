@@ -36,6 +36,14 @@ public class ApplicationExceptionHandler {
         return ResponseEntity.badRequest().body(validationErrors);
     }
 
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ExceptionHandler(IllegalStateException.class)
+    public ResponseEntity<String> IllegalStateException(IllegalStateException ex) {
+
+        String errorMessage = ex.getMessage();
+
+        return new ResponseEntity<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(DataIntegrityViolationException.class)

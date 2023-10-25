@@ -24,6 +24,8 @@ public class ProductService {
 
     private final ProductMapper productMapper;
 
+    private final CategoryService categoryService;
+
     //-------------------------------------------------------------------------------------------//
 
     public List<ProductModel> getAllProducts(){
@@ -91,12 +93,20 @@ public class ProductService {
     //-------------------------------------------------------------------------------------------//
 
     public void createNewProduct(@Valid ProductModel productModel){
+        int categories = categoryService.getAllCategories().size();
+        if (productModel.getCategoryId() > categories){
+            throw new IllegalStateException("The Category with ID : " + productModel.getCategoryId() + " does not exist");
+        }
         productRepository.save(productMapper.toEntity(productModel));
     }
 
     //-------------------------------------------------------------------------------------------//
 
     public void updateProduct(@Valid ProductModel productModel,Long productId ){
+        int categories = categoryService.getAllCategories().size();
+        if (productModel.getCategoryId() > categories){
+            throw new IllegalStateException("The Category with ID : " + productModel.getCategoryId() + " does not exist");
+        }
         productMapper.toModel(productRepository
                 .findById(productId)
                 .orElseThrow( ()-> new EntityNotFoundException("The Product with ID : (" + productId + ") does not exist")));

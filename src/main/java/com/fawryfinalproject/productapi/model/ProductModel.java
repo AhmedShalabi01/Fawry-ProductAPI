@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fawryfinalproject.productapi.entity.CategoryEntity;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -28,6 +29,7 @@ public class ProductModel {
     private double price;
 
     @Min(value = 1, message = "Category ID must be a positive number")
+    @NotNull
     private int categoryId;
 
     private String categoryName;
