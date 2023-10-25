@@ -15,7 +15,7 @@ public class CategoryModel {
     private int categoryId;
 
     @NotBlank(message = "Category name cannot be blank")
-    @JsonProperty("CategoryName")
+    @JsonProperty("categoryName")
     private String name;
 
 
