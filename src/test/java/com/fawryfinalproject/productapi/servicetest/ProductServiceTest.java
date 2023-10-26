@@ -5,6 +5,7 @@ import com.fawryfinalproject.productapi.entity.ProductEntity;
 import com.fawryfinalproject.productapi.mapper.ProductMapper;
 import com.fawryfinalproject.productapi.model.ProductModel;
 import com.fawryfinalproject.productapi.repository.ProductRepository;
+import com.fawryfinalproject.productapi.service.CategoryService;
 import com.fawryfinalproject.productapi.service.ProductService;
 import org.mockito.InjectMocks;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,6 +25,8 @@ public class ProductServiceTest {
     private ProductRepository productRepository;
     @Mock
     private ProductMapper productMapper;
+    @Mock
+    private CategoryService categoryService;
     @InjectMocks
     private ProductService productService;
 

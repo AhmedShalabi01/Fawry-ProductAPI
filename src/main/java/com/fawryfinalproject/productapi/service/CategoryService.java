@@ -41,7 +41,7 @@ public class CategoryService {
     public void deleteCategory(String categoryName){
         CategoryModel categoryModel = categoryMapper.toModel(categoryRepository
                 .findByName(categoryName)
-                .orElseThrow( ()-> new IllegalStateException("The Category with Name : " + categoryName + " does not exist")));
+                .orElseThrow( ()-> new IllegalStateException("The Category with ID : " + categoryName + " does not exist")));
 
         categoryRepository.deleteById(categoryMapper.toEntity(categoryModel).getCategoryId());
     }

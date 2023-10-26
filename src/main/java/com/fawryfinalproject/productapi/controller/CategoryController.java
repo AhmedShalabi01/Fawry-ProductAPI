@@ -26,14 +26,14 @@ public class CategoryController {
     //-------------------------------------------------------------------------------------------//
 
     @PostMapping(path = "/saveNewCategory")
-    public void createNewProduct(@RequestBody CategoryModel categoryModel){
+    public void createNewCategory(@RequestBody CategoryModel categoryModel){
         categoryService.createNewCategory(categoryModel);
     }
 
     //-------------------------------------------------------------------------------------------//
 
-    @DeleteMapping (value = "/deleteProduct/{name}")
-    public void deleteProductById(@PathVariable String name){
+    @DeleteMapping (value = "/deleteCategory/{name}")
+    public void deleteCategoryByName(@PathVariable String name){
         categoryService.deleteCategory(name);
     }
 }
