@@ -49,10 +49,10 @@ public class ProductController {
 
     //-------------------------------------------------------------------------------------------//
 
-        @RequestMapping(value = "/search")
-        public ResponseEntity<List<ProductModel>> getProductByIdOrNameOrCategory(@RequestParam(name = "Keyword") String Keyword){
-            return new ResponseEntity<>(productService.getProductByIdOrNameOrCategory(Keyword), HttpStatus.OK);
-        }
+    @RequestMapping(value = "/search")
+    public ResponseEntity<List<ProductModel>> getProductByIdOrNameOrCategory(@RequestParam(name = "Keyword") String Keyword){
+        return new ResponseEntity<>(productService.getProductByIdOrNameOrCategory(Keyword), HttpStatus.OK);
+    }
 
     //-------------------------------------------------------------------------------------------//
 
